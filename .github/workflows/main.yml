@@ -17,12 +17,12 @@ jobs:
     steps: 
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
-      with: 
+      with: #recursively pulls submodules
         submodules: recursive
 
     # Here is how you run terminal commands using GitHub workflows
     - name: output some text to the terminal using echo
-      run: echo I just ran the echo command in the terminal
+      run: echo I just ran the echo command in the terminal cool story bro
 
     # Compile and run the Hello World program
     - name: Hello World

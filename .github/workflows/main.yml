@@ -31,7 +31,8 @@ jobs:
     # Compile and run the Hello World program
     - name: Hello World
       run: |
-       g++ HelloWorld.cpp -o HelloWorld
+       cmake .
+       make
        ./HelloWorld
 
     #alternatively we could use cmake and make

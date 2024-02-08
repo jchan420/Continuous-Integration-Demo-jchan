@@ -17,11 +17,15 @@ jobs:
     steps: 
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
-      with: #recursively pulls submodules
+      with: #recursively pulls submodules, like a google tes\t folder
         submodules: recursive
 
     # Here is how you run terminal commands using GitHub workflows
     - name: output some text to the terminal using echo
+      run: echo I just ran the echo command in the terminal cool story bro
+
+    #if you had a google test folder, and didnt do the recursive on checkout, mabe do this
+    - name: update recurseivelu
       run: echo I just ran the echo command in the terminal cool story bro
 
     # Compile and run the Hello World program
@@ -29,3 +33,6 @@ jobs:
       run: |
        g++ HelloWorld.cpp -o HelloWorld
        ./HelloWorld
+
+    #alternatively we could use cmake and make
+  
